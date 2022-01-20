@@ -2,7 +2,7 @@ import mysql.connector
 from datetime import date
 from tabulate import tabulate
 
-db='Hotel' #input('Enter Name of your database: ')
+db=input('Enter Name of your database: ')
 
 #Connecting to MySQL
 mydb=mysql.connector.connect(host='localhost',user='root',password='88951')
@@ -15,7 +15,7 @@ print('Connection to the Database Succesfull...')
 mycursor=mydb.cursor()
 
 #Entering into the Table
-TableName='Rooms' #input('Enter the table name: ')
+TableName=input('Enter the table name: ')
 query="CREATE TABLE IF NOT EXISTS "+TableName+"\
 (RoomNo int PRIMARY KEY,\
 Price_per_day float,\
