@@ -158,7 +158,7 @@ WHERE RoomNo={}".format(TableName,rn))
 def Rooms():
     mycursor.execute('SELECT * FROM Rooms;')
     data=mycursor.fetchall()
-    print(tabulate(data,headers=['R.No','Price','Name','Physics Wallah.lnk','From','To','Bill','Status'],tablefmt='fancy_grid'))
+    print(tabulate(data,headers=['R.No','Price','Name','Contact','From','To','Bill','Status'],tablefmt='fancy_grid'))
     options()
 
 def RoomDetails():
